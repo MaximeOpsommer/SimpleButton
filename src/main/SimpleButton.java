@@ -253,6 +253,14 @@ public class SimpleButton {
 	   frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 	   int button = 1;
+	   try {
+		   int i = Integer.parseInt(args[0]);
+		   if(i > 0 && i < 4)
+			   button = i;
+	   } catch(Exception e) {
+		   
+	   }
+
 	   SimpleButton simple = new SimpleButton(canvas, "simple", button);
 	   simple.getShape().translateBy(100,100);
     }
